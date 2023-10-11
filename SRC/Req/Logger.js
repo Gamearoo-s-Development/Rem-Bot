@@ -1,3 +1,3 @@
-const { ExecuteConsole } = require("ram-api.js");
+const { ExecuteLogger } = require("ram-api.js");
 
-exports.logger = new ExecuteConsole("Rem Bot");
+exports.logger = new ExecuteLogger("Rem Bot");

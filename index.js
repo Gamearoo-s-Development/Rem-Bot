@@ -1,8 +1,8 @@
 require("dotenv").config();
-const { Client } = require("eris");
+const { GatewayIntentBits, Client } = require("discord.js");
 
-const client = new Client(process.env.TOKEN, {
-  intents: ["guildMembers", "guilds", "guildEmojis", "guildWebhooks"],
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds],
 });
 
-require("./SRC/start")(client);
+require("./src/start")(client);
