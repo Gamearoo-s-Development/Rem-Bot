@@ -10,6 +10,7 @@ const { token } = require("../../Req/token");
 module.exports = {
   name: "fun",
   desc: "Get the fun commands",
+  total: 1,
   perm: PermissionFlagsBits.SendMessages,
   options: [
     {

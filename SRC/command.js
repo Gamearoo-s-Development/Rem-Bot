@@ -21,6 +21,8 @@ module.exports = (client) => {
 
       client.commands.set(name, pull);
 
+      client.totalcmds = client.totalcmds + pull.total;
+
       if (type) {
         new HelperClient(client).GlobalcommandRegisterAsync({
           name,

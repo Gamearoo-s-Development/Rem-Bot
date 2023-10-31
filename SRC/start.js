@@ -1,7 +1,8 @@
 const helper = require("discord-helper.js");
 
-const { logger } = require("./Req/Logger");
 const { Client, Collection, PermissionsBitField } = require("discord.js");
+const { api } = require("../Dashboard/app");
+const { logger } = require("./Req/Logger");
 
 /**
  *
@@ -9,7 +10,10 @@ const { Client, Collection, PermissionsBitField } = require("discord.js");
  */
 module.exports = (client) => {
   client.commands = new Collection();
+  client.totalcmds = 0;
+
   client.on("ready", () => {
+    api(client);
     require("./command")(client);
     client.user.setPresence({
       status: "dnd",

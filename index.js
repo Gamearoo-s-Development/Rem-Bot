@@ -5,4 +5,4 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
 
-require("./src/start")(client);
+require("./SRC/start")(client);
